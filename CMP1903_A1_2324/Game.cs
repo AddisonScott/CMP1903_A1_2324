@@ -10,7 +10,7 @@ namespace CMP1903_A1_2324
    {
 
        private Die[] dice;
-       public int RollNumber = 0;
+       public int RollNumber = 1;
 
        //Creates 3 instance of die.
        public Game()
