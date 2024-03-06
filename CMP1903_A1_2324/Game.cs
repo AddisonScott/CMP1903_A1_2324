@@ -10,7 +10,7 @@ namespace CMP1903_A1_2324
    {
 
        private Die[] dice;
-       public int RollNumber = 1;
+       public int rollNumber = 1;
 
        //Creates 3 instance of die.
        public Game()
@@ -31,7 +31,7 @@ namespace CMP1903_A1_2324
                Console.WriteLine("Rolling....");
                rolls[i] = dice[i].Roll();
                Console.WriteLine($"Die number {RollNumber} is {rolls[i]}");
-               RollNumber++;
+               rollNumber++;
            }
            return rolls;
        }
