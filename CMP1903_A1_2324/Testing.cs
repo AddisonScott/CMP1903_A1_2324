@@ -8,13 +8,34 @@ namespace CMP1903_A1_2324
 {
     internal class Testing
     {
-        /*
-         * This class should test the Game and the Die class.
-         * Create a Game object, call the methods and compare their output to expected output.
-         * Create a Die object and call its method.
-         * Use debug.assert() to make the comparisons and tests.
-         */
+        public Testing()
+        {
+            //Creates 3 instances of dice
+            Game game = new Game();
+            while (true)
+            {
+                //Rolls 3 instances of dice
+                int[] diceNumbers = game.RollDie();
+                
+                //Checks if values are valid.
+                foreach (int i in diceNumbers)
+                {
+                    Debug.Assert(i > 0 && i <= 6, "Value not within correct range");
+                }
 
-        //Method
+                //Total sum of the 3 dice.
+                int total = game.SumOfDice(diceNumbers);
+                Console.WriteLine($"The total is sum is {total}");
+                Debug.Assert(total >= 3 && total <= 18, "Sum of Dice is too large");
+
+                
+                //Allows user to stop rerolling.
+                Console.WriteLine("Press enter to continue or write exit to stop");
+                if (Console.ReadLine() == "exit")
+                {
+                    break;
+                }
+            }
+        }
     }
 }
