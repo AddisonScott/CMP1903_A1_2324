@@ -8,7 +8,7 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-         private int CurrentValue;
+         private int currentValue;
          //Static means this isntance of random belongs to the whole class and not each instance, this way it isnt seeded in quick succession.
          private static Random random = new Random();
         
@@ -16,7 +16,7 @@ namespace CMP1903_A1_2324
          public int Roll()
          {          
              CurrentValue = random.Next(1, 7);
-             return CurrentValue;
+             return currentValue;
          }
     }
 }
