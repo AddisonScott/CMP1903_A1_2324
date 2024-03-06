@@ -8,17 +8,15 @@ namespace CMP1903_A1_2324
 {
     internal class Die
     {
-        //Current Value Property
-        private int CurrentValue;
-
+         private int CurrentValue;
+         //Static means this isntance of random belongs to the whole class and not each instance, this way it isnt seeded in quick succession.
+         private static Random random = new Random();
         
-        //Method to roll dice and return integer
-        public int Roll()
-        {
-            Random random = new Random();
-            CurrentValue = random.Next(1,7);
-            return CurrentValue;
-
-        }
+         //Generates a random integer between 1 and 6.
+         public int Roll()
+         {          
+             CurrentValue = random.Next(1, 7);
+             return CurrentValue;
+         }
     }
 }
